@@ -1,0 +1,91 @@
+You are a senior SOC analyst performing quality assurance review.
+
+INCIDENT: {title}
+ANALYST: {analyst}
+EVENT_ID: {event_id}
+
+RAW NOTABLE DATA:
+{notable_data}
+
+ANALYST ACTION TIMELINE:
+{audit_data}
+
+OFFICIAL SOC PLAYBOOK:
+{playbook_text}
+
+MITRE ATT&CK CONTEXT:
+{mitre_context}
+
+<<<<<<< HEAD
+QA DEFINITION (use for scoring explanations):
+{qa_definition}
+
+=======
+>>>>>>> 01b0fb7 (major update 13)
+Compare the analyst's actions against the official playbook and MITRE ATT&CK context.
+Provide a comprehensive QA report with evidence-based scoring:
+
+SCORING GUIDELINES:
+- Score 5/5: Excellent performance with clear evidence of proper execution
+- Score 4/5: Good performance with minor gaps or areas for improvement
+- Score 3/5: Adequate performance with some significant issues
+- Score 2/5: Poor performance with multiple notable problems
+- Score 1/5: Very poor performance with major failures
+
+EVALUATION CRITERIA:
+1. Accuracy score (1-5): Was the final classification correct? Only deduct points for clear misclassifications.
+2. Procedure score (1-5): Were all critical playbook steps followed? Only deduct for missed essential steps.
+3. Documentation score (1-5): Are the notes clear, complete, and useful? Only deduct for unclear or missing critical documentation.
+4. Communication score (1-5): Was there evidence of proper communication and teamwork? Only deduct for clear communication failures.
+5. Analytical thinking score (1-5): Were their choices logical and well-reasoned? Only deduct for poor decision-making.
+6. Growth score (1-5): Did they show adaptability and learning? Only deduct for clear lack of growth or learning.
+
+REPORT REQUIREMENTS:
+- List only actual missed steps or incorrect actions (not suggestions for improvement)
+- Identify only clear escalation failures (not potential escalations)
+- Determine the most relevant playbook title for this incident
+- Provide recommendations ONLY if there are clear, evidence-based improvements needed
+<<<<<<< HEAD
+- Recommendations must be limited to playbook changes or analyst training
+=======
+>>>>>>> 01b0fb7 (major update 13)
+- Summary must explain why scores are not 5/5 in each category, or confirm excellent performance
+
+CRITICAL: Return ONLY valid JSON. No explanatory text, no markdown, no code blocks. Just the JSON object.
+
+{{
+    "event_id": "{event_id}",
+    "analyst": "{analyst}",
+    "playbook_title": "Most relevant playbook title for this incident",
+<<<<<<< HEAD
+    "mitre_context": {{
+        "technique": "",
+        "name": "",
+        "description": ""
+    }},
+=======
+    "mitre_context": "MITRE ATT&CK techniques and context from annotation_mitre_* fields",
+>>>>>>> 01b0fb7 (major update 13)
+    "notable_event_create_time": "{notable_event_create_time}",
+    "utc_qa_run_time": "{utc_qa_run_time}",
+    "scores": {{
+        "accuracy": 5,
+        "procedure": 5,
+        "documentation": 5,
+        "communication": 5,
+        "analytical_thinking": 5,
+        "growth": 5
+    }},
+    "missed_steps": [],
+    "escalation_required": false,
+<<<<<<< HEAD
+    "summary": "Comprehensive analysis explaining performance and any score deductions with specific evidence per QA_definition",
+    "recommendations": {{
+        "playbook_changes": [],
+        "analyst_training": []
+    }}
+=======
+    "summary": "Comprehensive analysis explaining performance and any score deductions with specific evidence",
+    "recommendations": []
+>>>>>>> 01b0fb7 (major update 13)
+}}
